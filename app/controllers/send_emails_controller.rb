@@ -12,7 +12,7 @@ class SendEmailsController < ApplicationController
             "https://api.mailjet.com/v3/send/message",
             :body => {
                :to => email_address,
-               :from => "Shannon from A Song A Day<#{ENV['myRegisteredMailjetEmailAtDomainDotCom']}>",
+               :from => "Shannon from A Song A Day <#{ENV['myRegisteredMailjetEmailAtDomainDotCom']}>",
                :subject => "Today's song is...",
                :html => "<p>Hi,</p>\n\n
                <p>Here's your song of the day, curated by <a href=#{params[:send_email][:twitter_page]} target='_blank'>#{params[:send_email][:curator]}</a>:</p>\n\n
