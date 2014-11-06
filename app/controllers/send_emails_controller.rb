@@ -5,14 +5,14 @@ class SendEmailsController < ApplicationController
 
   def send_email
      email_addresses = params[:send_email][:email_addresses].split("\r\n")
-   #   debugger
-   #   debugger
+     debugger
+     debugger
      email_addresses.each do |email_address|
         response = HTTParty.post(
             "https://api.mailjet.com/v3/send/message",
             :body => {
                :to => email_address,
-               :from => ENV['myRegisteredMailjetEmailAtDomainDotCom'],
+               :from => "Shannon from A Song A Day<#{ENV['myRegisteredMailjetEmailAtDomainDotCom']}>",
                :subject => "Today's song is...",
                :html => "<p>Hi,</p>\n\n
                <p>Here's your song of the day, curated by <a href=#{params[:send_email][:twitter_page]} target='_blank'>#{params[:send_email][:curator]}</a>:</p>\n\n
