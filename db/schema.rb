@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20141106001023) do
     t.string   "curator"
     t.string   "click_to_tweet"
     t.string   "message"
+    t.string   "twitter_page"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -8,6 +8,7 @@ class CreateSendEmails < ActiveRecord::Migration
       t.string :curator
       t.string :click_to_tweet
       t.string :message
+      t.string :twitter_page
 
       t.timestamps
     end
