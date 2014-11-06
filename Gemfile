@@ -43,6 +43,7 @@ gem 'httparty'
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'dotenv-deployment'
 end
 
 group :development, :test do
