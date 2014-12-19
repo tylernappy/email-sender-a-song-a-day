@@ -4,10 +4,10 @@ class SendEmailsController < ApplicationController
   end
 
   def send_email
-     email_addresses = params[:send_email][:email_addresses].split("\r\n")
+     @email_addresses = params[:send_email][:email_addresses].split("\r\n")
      debugger
      debugger
-     email_addresses.each do |email_address|
+     @email_addresses.each do |email_address|
         response = HTTParty.post(
             "https://api.mailjet.com/v3/send/message",
             :body => {

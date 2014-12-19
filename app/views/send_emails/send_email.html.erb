@@ -1,2 +1,5 @@
-<h1>You sent the Emails!</h1>
+<h1>You sent the emails to the following addresses:</h1>
+<% @email_addresses.each do |email_address| %>
+<p><%= email_address %></p>
+<% end %>
 <%= link_to "Go Back", root_url %>
