@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   root to: "send_emails#create_email"
   get 'send_emails/create_email'
+  get 'send_emails/scheduled'
+
+  get 'send_emails/unschedule/:id' => 'send_emails#unschedule'
+  post 'send_emails/unschedule/:id' => 'send_emails#unschedule'
+  post 'send_emails/scheduled'
 
   post 'send_emails/send_email'
   get 'send_emails/send_email'

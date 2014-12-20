@@ -1,4 +1,14 @@
 class SendEmailsController < ApplicationController
+  def scheduled
+     @morning_emails = SendEmail.where(when_to_send: "Morning")
+     @evening_emails = SendEmail.where(when_to_send: "Evening")
+  end
+
+  def unschedule
+     SendEmail.delete(params[:id])
+     redirect_to send_emails_scheduled_path
+  end
+
   def create_email
      @email = SendEmail.new
   end

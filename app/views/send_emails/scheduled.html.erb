@@ -1,0 +1,76 @@
+<div class="row">
+   <div class="col-xs-6 col-xs-offset-1"><h1>Scheduled Emails</h1></div>
+   <div class="col-xs-4 text-right"><h2><%= link_to "Send Emails", root_path %></h2></div>
+</div>
+<!-- Morning Emails -->
+<div class="row">
+   <div class="col-xs-12"><h3>Emails to go out at next 9:00 am</h3></div>
+</div>
+<div class="row">
+   <div class="col-xs-2"><p>Email Addresses</p></div>
+   <div class="col-xs-2"><p>Song</p></div>
+   <div class="col-xs-2"><p>Band</p></div>
+   <div class="col-xs-1"><p>Link</p></div>
+   <div class="col-xs-1"><p>Message</p></div>
+   <div class="col-xs-1"><p>Curator</p></div>
+   <div class="col-xs-1"><p>Twitter</p></div>
+   <div class="col-xs-1"><p>Link to Tweet</p></div>
+   <div class="col-xs-1"><p>Unschedule</p></div>
+</div>
+<% @morning_emails.each do |email| %>
+   <div class="well">
+      <div class="row">
+         <div class="col-xs-2">
+         <% email.email_addresses.split("\r\n").each do |email_address| %>
+            <div class="row">
+               <div class="col-xs-12"><%= email_address %></div>
+            </div>
+         <% end %>
+         </div>
+         <div class="col-xs-2"><%= email.song %></div>
+         <div class="col-xs-2"><%= email.band %></div>
+         <div class="col-xs-1"><%= email.link %></div>
+         <div class="col-xs-1"><%= email.message %></div>
+         <div class="col-xs-1"><%= email.curator %>r</div>
+         <div class="col-xs-1"><%= email.twitter_page %></div>
+         <div class="col-xs-1"><%= email.click_to_tweet %></div>
+         <div class="col-xs-1"><%= link_to "Unschedule", controller: "send_emails", action: "unschedule", id: email.id%></div>
+      </div>
+   </div>
+<% end %>
+
+<!-- Evening Emails -->
+<div class="row">
+   <div class="col-xs-12"><h3>Emails to go out at next 4:00pm</h3></div>
+</div>
+<div class="row">
+   <div class="col-xs-2"><p>Email Addresses</p></div>
+   <div class="col-xs-2"><p>Song</p></div>
+   <div class="col-xs-2"><p>Band</p></div>
+   <div class="col-xs-1"><p>Link</p></div>
+   <div class="col-xs-1"><p>Message</p></div>
+   <div class="col-xs-1"><p>Curator</p></div>
+   <div class="col-xs-1"><p>Twitter</p></div>
+   <div class="col-xs-1"><p>Link to Tweet</p></div>
+</div>
+<% @evening_emails.each do |email| %>
+   <div class="well">
+      <div class="row">
+         <div class="col-xs-2">
+         <% email.email_addresses.split("\r\n").each do |email_address| %>
+            <div class="row">
+               <div class="col-xs-12"><%= email_address %></div>
+            </div>
+         <% end %>
+         </div>
+         <div class="col-xs-2"><%= email.song %></div>
+         <div class="col-xs-2"><%= email.band %></div>
+         <div class="col-xs-1"><%= email.link %></div>
+         <div class="col-xs-1"><%= email.message %></div>
+         <div class="col-xs-1"><%= email.curator %>r</div>
+         <div class="col-xs-1"><%= email.twitter_page %></div>
+         <div class="col-xs-1"><%= email.click_to_tweet %></div>
+         <div class="col-xs-1"><%= link_to "Unschedule", controller: "send_emails", action: "unschedule", id: email.id%></div>
+      </div>
+   </div>
+<% end %>
