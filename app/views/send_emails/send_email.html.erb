@@ -1,4 +1,8 @@
-<h1>You sent the emails to the following addresses:</h1>
+<% if params[:send_email][:when_to_send]== "Now" %>
+  <h1>You sent the emails to the following addresses:</h1>
+<% else %>
+  <h1>You scheduled the following emails to be sent in the <%= params[:send_email][:when_to_send].downcase %></h1>
+<% end %>
 <% @email_addresses.each do |email_address| %>
 <p><%= email_address %></p>
 <% end %>
