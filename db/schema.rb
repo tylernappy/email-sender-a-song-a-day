@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141219232513) do
+ActiveRecord::Schema.define(version: 20150117235734) do
 
   create_table "send_emails", force: true do |t|
     t.string   "email_addresses"
@@ -25,6 +25,12 @@ ActiveRecord::Schema.define(version: 20141219232513) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "when_to_send"
+  end
+
+  create_table "unsubscribes", force: true do |t|
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

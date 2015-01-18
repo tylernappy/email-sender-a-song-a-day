@@ -49,7 +49,7 @@ class SendEmailsController < ApplicationController
  </tr></table></td>
  </tr></table><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" height=\"10\" style=\"height: 10px;border-collapse: collapse;font-size: 1px;\"><tr><td height=\"10\" style=\"height:10px; border-spacing: 0;font-size: 1px;\"> </td></tr></table><table cellpadding=\"10\" cellspacing=\"0\" border=\"0\" style=\"margin: 0; border-collapse: collapse;\" width=\"600\"><tr><td style=\"color: #444444; background-color: #eeeeee; border-color: #eeeeee; align: left; font-family: arial; font-size: 11px; \">
  <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width: 100%; margin: 0; border-collapse: collapse;\" width=\"100%\"><tr><td align=\"left\" valign=\"top\" style=\"vertical-align: top; text-align: left; color: #444444; background-color: #eeeeee; border-color: #eeeeee; align: left; font-family: arial; font-size: 11px; \">
- <div id=\"nl_footer\" style=\"display: block; text-align: left; margin: 0;\">This email has been sent to <a href=\"mailto:[[EMAIL_TO]]\" style=\"color:#000000;border: none;\">[[EMAIL_TO]]</a>, <a href=\"[[UNSUB_LINK_EN]]\" style=\"color:#000000;border: none;\">click here to unsubscribe</a>.</div>
+ <div id=\"nl_footer\" style=\"display: block; text-align: left; margin: 0;\">This email has been sent to <a href=\"mailto:[[EMAIL_TO]]\" style=\"color:#000000;border: none;\">[[EMAIL_TO]]</a>, <a href=\"https://email-sender-a-song-a-day.herokuapp.com/unsubscribe/create\" style=\"color:#000000;border: none;\">click here to unsubscribe</a>.</div>
  <div id=\"footer_address\" style=\"display: block; text-align: left; margin: 5px 0 0;\">A Song A Day<br>
 Shannon Byrne<br>
 471 Vanderbilt Ave., Apt. 1E<br>

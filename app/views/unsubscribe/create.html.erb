@@ -1,0 +1,18 @@
+<br />
+<br />
+<br />
+
+<%= form_for @email, :url => url_for(:controller => 'unsubscribe', :action => 'thanks') do |f| %>
+<div class="container">
+   <div class="row">
+      <div class="col-xs-6  col-xs-offset-3 text-center">Enter your email address below and click "Unsubscribe" to be removed from our mailing list.</div>
+   </div>
+   <div class="row">
+      <div class="col-xs-12 text-center"><%= f.text_field :email %></div>
+   </div>
+</br>
+<div class="row">
+   <div class="col-xs-6 col-xs-offset-3 text-center"><%= f.submit "Unsubscribe" %></div>
+</div>
+</div>
+<% end %>

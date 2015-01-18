@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root to: "send_emails#create_email"
   get 'send_emails/create_email'
   get 'send_emails/scheduled'
@@ -9,6 +10,11 @@ Rails.application.routes.draw do
 
   post 'send_emails/send_email'
   get 'send_emails/send_email'
+
+  get 'unsubscribe/create'
+
+  get 'unsubscribe/thanks'
+  post 'unsubscribe/thanks'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
